@@ -2,15 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-}
 
-li img{
-  @apply py-5 m-auto;
-  z-index: 20;
-  position: relative;
-  pointer-events: none;
- /* margin-auto:to center the image py:for top and bottom padding*/
+ul a{
+  width:100%
 }
 
 li{
@@ -18,15 +12,36 @@ li{
   background-size: 10px;
   position: relative;
 }
+li svg{
+  @apply py-5 m-auto;
+  z-index: 20;
+  position: relative;
+  pointer-events: none;
+ /* margin-auto:to center the image py:for top and bottom padding*/
+ width:40px;
+ height: auto;
+}
+li.records-icon svg{
+  width:50px;
+  height: auto;
+}
+
+ul a.active li::before,
 li:hover::before{
   width:100%;
 }
+
+ul a.active svg path,
+li:hover svg path{
+  fill:hsl(224, 70%, 64%);
+}
 li::before{
-  @apply bg-blue-600;
+  @apply bg-white;
   content:"";
   position:absolute;
   width:0;
+  right: 0;
   height:100%;
   z-index: 10;
-  transition: width 150ms linear;
+  transition: width 100ms linear;
 }
