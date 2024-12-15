@@ -2,46 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
-ul a{
-  width:100%
+body{
+  /* font-family: 'montserrat', Arial, Times, serif; */
+  
 }
 
-li{
-  width:100%;
-  background-size: 10px;
-  position: relative;
-}
-li svg{
-  @apply py-5 m-auto;
-  z-index: 20;
-  position: relative;
-  pointer-events: none;
- /* margin-auto:to center the image py:for top and bottom padding*/
- width:40px;
- height: auto;
-}
-li.records-icon svg{
-  width:50px;
-  height: auto;
+.container{
+  @apply pt-8 p-4
 }
 
-ul a.active li::before,
-li:hover::before{
-  width:100%;
-}
 
-ul a.active svg path,
-li:hover svg path{
-  fill:hsl(224, 70%, 64%);
-}
-li::before{
-  @apply bg-white;
-  content:"";
-  position:absolute;
-  width:0;
-  right: 0;
-  height:100%;
-  z-index: 10;
-  transition: width 100ms linear;
+
+.logo{
+ @apply absolute top-0 right-0 scale-75 origin-top-right;
 }

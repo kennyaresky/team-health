@@ -1,0 +1,39 @@
+.container{
+ width:90% !important;
+ margin-inline: auto;
+}
+.container header svg{
+    width:25px;
+    height:auto;
+}
+._table{
+@apply flex flex-col items-center gap-4
+}
+
+.row{
+@apply grid grid-cols-[2fr_1.75fr_1fr_1fr] justify-center bg-grey p-4 rounded-xl w-full text-xl font-semibold items-center
+}
+
+.row:nth-child(1){
+@apply bg-transparent rounded-none border-y-2 p-2 border-black mb-3
+}
+
+.row .column:nth-child(3),
+.row .column:nth-child(4){
+@apply justify-self-center
+}
+
+.cart > svg{
+    width:25px;
+    height:auto;
+}
+
+
+.search_active{
+    @apply w-[150px] border-2;
+    transition: width 150ms linear;
+}
+.search_inactive{
+    @apply w-0 border-none;
+    transition: width 150ms linear
+}
