@@ -10,10 +10,10 @@ export default function DrugsModal({selectedDrug, setIsModalOpen}) {
         <div className="pharmacy">Pharmacy: {selectedDrug.pharmacy}</div>
 <div className="quantity flex">
     Quantity:  
-    <button className="subtract mx-2  bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>{setQuantity(quantity-1); setShoppingCart([...shoppingCart, selectedDrug.quantity - 1])}}>-</button>
+    <button className="subtract mx-2  bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>{setQuantity(quantity-1)}}>-</button>
     {quantity}
-    <button className="ml-2 add bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>{setQuantity(quantity+1); setShoppingCart([...shoppingCart, selectedDrug.quantity + 1])}}>+</button></div>
-        <button className="bg-green-primary px-3 py-1 rounded text-white" onClick={()=>{setIsModalOpen(false); setShoppingCart([...shoppingCart, selectedDrug])}}>OK</button>
+    <button className="ml-2 add bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>{setQuantity(quantity+1)}}>+</button></div>
+        <button className="bg-green-primary px-3 py-1 rounded text-white" onClick={()=>{setIsModalOpen(false); setShoppingCart([...shoppingCart, {...selectedDrug, quantityToBuy:quantity}])}}>OK</button>
     </div>
   )
 }

@@ -11,3 +11,8 @@
   main .side_bottom_right{
     @apply col-start-2 col-end-3 row-start-2 row-end-3 bg-grey;
 }
+
+.top{
+    background-image: url("../assets/images/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
+    /* background-position: center calc(50% - 10px); */
+}
