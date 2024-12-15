@@ -1,0 +1,73 @@
+main{
+    @apply grid grid-cols-2 auto-rows-[155px] w-[1000px] gap-4
+  }
+  
+  main .main_exercise{
+    @apply col-start-1 col-end-2 row-start-1 row-end-3;
+  }
+  main .side_exercise_top{
+    @apply col-start-2 col-end-3 row-start-1 row-end-2 bg-grey
+  }
+  main .side_exercise_bottom{
+    @apply col-start-2 col-end-3 row-start-2 row-end-3 bg-grey
+  }
+  
+  .exercise_categories .group{
+  @apply grid grid-cols-3 auto-rows-[100px] w-[1000px] gap-4
+  }
+  .exercise_categories .group .category{
+  @apply bg-grey rounded-xl relative overflow-hidden flex items-center justify-center
+  }
+  
+  
+  .strength,
+  .cardio,
+  .flexibility,
+  .yoga,
+  .warm_up,
+  .core{
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .strength{
+    background-image: url("../assets/images/man-exercising-with-ropes.jpg");
+    background-position: center calc(50% - 10px);
+  }
+  .cardio{
+    background-image: url("../assets/images/woman-doing-sit-ups.jpg");
+    background-position: center -30px;
+  }
+  .flexibility{
+    background-image: url("../assets/images/very-flexible-woman.jpg");
+    background-position: center calc(50%);
+  }
+  .yoga{
+    background-image: url("../assets/images/woman-doing-yoga.jpg");
+    background-position: center calc(50% - 10px);
+  }
+  .warm_up{
+    background-image: url("../assets/images/women-stretching.jpg");
+    background-position: center calc(50% + 25px);
+  }
+  .core{
+    background-image: url("../assets/images/woman-jumping.jpg");
+    background-position: center -20px;
+  }
+  
+  .exercise_categories .group .category::before{
+  content:"";
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display:block;
+  position: absolute;
+  }
+  
+  .exercise_categories .category p{
+    @apply text-white font-bold z-10 text-3xl
+  }
+
+  .main_exercise a{
+    @apply block h-full w-full grid
+  }

@@ -1,0 +1,13 @@
+.main{
+    @apply grid grid-cols-2 auto-rows-[250px] w-[1000px] gap-4 m-auto;
+  }
+  
+  main .main_top{
+    @apply col-start-1 col-end-3 row-start-1 row-end-2 bg-grey
+  }
+  main .side_bottom_left{
+    @apply col-start-1 col-end-2 row-start-2 row-end-3 bg-grey
+  }
+  main .side_bottom_right{
+    @apply col-start-2 col-end-3 row-start-2 row-end-3 bg-grey;
+}

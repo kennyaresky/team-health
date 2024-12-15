@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    width:80% !important;
+    padding-top: 3rem
+}
+.container header svg{
+    width:25px;
+    height:auto;
+}
+
+.main{
+    @apply grid grid-cols-3 auto-rows-[175px] m-auto gap-6
+}
+
+.ul{
+@apply pl-4 pb-6 font-semibold flex flex-col justify-center
+}
