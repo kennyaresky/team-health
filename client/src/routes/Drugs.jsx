@@ -7,7 +7,6 @@ import { useState, useContext, useRef } from "react"
 import Search from "../components/Search.jsx"
 import DrugsModal from "../components/drugs/DrugsModal.jsx"
 import { NavLink } from "react-router-dom"
-import ShoppingCartContext from "../contexts/ShoppingCartContext"
 
 
 
@@ -27,8 +26,6 @@ function handleChange(){
   setDrugs(newDrugs)
 }
   return (
-    <ShoppingCartContext>
-
         <div className={`container flex flex-col w-[80%] ${s.container}`}>
     {isModalOpen && <div className="darkoverlay absolute inset-0 bg-black/30 pointer-events-none"></div>}
     {isModalOpen && <DrugsModal {...{selectedDrug, setIsModalOpen}} />}
@@ -48,7 +45,6 @@ function handleChange(){
       ))}
       </div>
    </div>
-    </ShoppingCartContext>
   )
 }
 // ok so create the modal we need to create the modal component and then create state to determine whether the modal is open or not, the modal will be imported into the drugs component and then there will also be state in the home component that will dictate what will be shown in the modal

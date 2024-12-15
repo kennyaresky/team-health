@@ -8,17 +8,17 @@ export default function ShoppingCart() {
     <div className="container">
     <h2>Shopping cart</h2>
     <div className="products">
-        {shoppingCart.map(item => {
+        {shoppingCart.map(item => (
 <div className="product">
   <h3>{item.name}</h3>
-  <p>item.pharmacy</p>
+  <p>{item.pharmacy}</p>
 <div className="quantity flex">
     Quantity:
-    <button className="subtract mx-2  bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>setShoppingCart([...shoppingCart, item.quantity + 1])}>-</button>
-    {quantity}
-    <button className="ml-2 add bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>setShoppingCart([...shoppingCart, item.quantity + 1])}>+</button></div>
+    <button className="subtract mx-2  bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>shoppingCart.map((product)=>(product.name === item.name ? {...product, quantityToBuy : product.quantityToBuy + 1} : product))}>-</button>
+    {item.quantityToBuy}
+    <button className="ml-2 add bg-green-primary rounded-[50%] w-[25px] h-[25px]" onClick={()=>shoppingCart.map((product)=>(product.name === item.name ? {...product, quantityToBuy : product.quantityToBuy - 1} : product))}>+</button></div>
     </div>
-        })}
+        ))}
     </div>
 </div>
   )
